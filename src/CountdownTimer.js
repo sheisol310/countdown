@@ -3,10 +3,9 @@ import { useNavigate } from "react-router-dom"
 import './CountdownTimer.css';
 
 function CountdownTimer() {
-  // const currentDate = new Date();
-  // const newYear = new Date(currentDate.getFullYear() + 1, 0, 1); // January 1st of the next year
-  // const remainingTime = Math.floor((newYear - currentDate) / 1000); // remaining time in seconds
-  const remainingTime = 3
+  const currentDate = new Date();
+  const newYear = new Date(currentDate.getFullYear() + 1, 0, 1); // January 1st of the next year
+  const remainingTime = Math.floor((newYear - currentDate) / 1000); // remaining time in seconds
 
   const [time, setTime] = useState(remainingTime);
   const navigate = useNavigate()
@@ -29,20 +28,20 @@ function CountdownTimer() {
   const seconds = time % 60;
 
   return (
-    // <div>
-    //   {days} days, {hours} hours, {minutes} minutes, {seconds} seconds remaining
-    // </div>
+    <React.Fragment>
+        <h3>Wait for a surprise after the countdown</h3>
+        <div className="countdown-timer">
+          <span>{days}</span>
+          <span>days</span>
+          <span className="two-numbers">{hours}</span>
+          <span>hours</span>
+          <span className="two-numbers">{minutes}</span>
+          <span>minutes</span>
+          <span className="two-numbers">{seconds}</span>
+          <span>seconds</span>
+        </div>
 
-    <div className="countdown-timer">
-      <span>{days}</span>
-      <span>days</span>
-      <span className="two-numbers">{hours}</span>
-      <span>hours</span>
-      <span className="two-numbers">{minutes}</span>
-      <span>minutes</span>
-      <span className="two-numbers">{seconds}</span>
-      <span>seconds</span>
-    </div>
+    </React.Fragment>
   );
 }
 
