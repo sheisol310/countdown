@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom"
+import './CountdownTimer.css';
 
 function CountdownTimer() {
   // const currentDate = new Date();
@@ -28,8 +29,19 @@ function CountdownTimer() {
   const seconds = time % 60;
 
   return (
-    <div>
-      {days} days, {hours} hours, {minutes} minutes, {seconds} seconds remaining
+    // <div>
+    //   {days} days, {hours} hours, {minutes} minutes, {seconds} seconds remaining
+    // </div>
+
+    <div className="countdown-timer">
+      <span>{days}</span>
+      <span>days</span>
+      <span className="two-numbers">{hours}</span>
+      <span>hours</span>
+      <span className="two-numbers">{minutes}</span>
+      <span>minutes</span>
+      <span className="two-numbers">{seconds}</span>
+      <span>seconds</span>
     </div>
   );
 }
