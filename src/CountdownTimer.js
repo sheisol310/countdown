@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom"
 import './CountdownTimer.css';
 
 function CountdownTimer() {
-  const currentDate = new Date();
-  const newYear = new Date(currentDate.getFullYear() + 1, 0, 1); // January 1st of the next year
-  const remainingTime = Math.floor((newYear - currentDate) / 1000); // remaining time in seconds
-
+//   const currentDate = new Date();
+//   const newYear = new Date(currentDate.getFullYear() + 1, 0, 1); // January 1st of the next year
+//   const remainingTime = Math.floor((newYear - currentDate) / 1000); // remaining time in seconds
+  const remainingTime = 10
   const [time, setTime] = useState(remainingTime);
   const navigate = useNavigate()
 
